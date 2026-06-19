@@ -11,45 +11,146 @@
 <body>
     <aside>
         <section>
-            <h1>Mikko Egor Legezin</h1>
-            <a href="./cv_dummy.txt" target="_blank" download="Mikko_Legezin_CV">CV</a>
+            <h1 id="title">Mikko Egor Legezin</h1>
         </section>
-        <nav>
-            <ul>
-                <li><a>A</a></li>
-            </ul>
-        </nav>
-        <div></div>
+        <section>
+            <nav>
+                <ul id="navList">
+                    <li><a href="./cv_dummy.pdf" target="_blank" download="Mikko_Legezin_CV">CV</a></li>
+                </ul>
+            </nav>
+        </section>
+        <div></div> <!-- dummy-element to keep the above section in center -->
     </aside>
-    <main>
-        <section id="minusta">
-            
+    <main id="main">
+        <section id="introduction" name="Minusta">
+            <p class="headsup">Tämä on vielä työn alla, niin tavaraa puuttuu vielä mut kiitti lukemisest ööh juu</p>
+
+            <h1>Hei!</h1>
+            <p>Olen Mikko, <span id="myAge"></span> vuotias tieto- ja viestintätekniikan perustutkinnon ja kaksoitutkinnon suorittanut opiskelija, pyrkimässä opiskelemaan tietojenkäsittelytiedettä.</p>
+
         </section>
         <hr />
-        <section id="kokemus">
-            b
+        <section id="degrees" name="Opinnot">
+            <h1>Opinnot</h1>
+            <ul>
+                <li>
+                    <h2>Business College Helsinki</h2>
+                    <h3>Tieto- ja viestintätekniikan perustutkinto</h3>
+                    <h3>2020 - 2023</h3>
+                    <p>...</p>
+                </li>
+                <li>
+                    <h2>Töölön yhteiskoulun aikuislukio</h2>
+                    <h3>Ylioppilastutkinto (kaksoistutkinto)</h3>
+                    <h3>2020 - 2023</h3>
+                    <p>...</p>
+                </li>
+                <li>
+                    <h2>Yhtenäiskoulu</h2>
+                    <h3>Peruskoulun luokat 6 - 9</h3>
+                    <h3>2017 - 2020</h3>
+                    <p>...</p>
+                </li>
+                <li>
+                    <h2>Vallilan ala-aste</h2>
+                    <h3>Peruskoulun luokat 1 - 5</h3>
+                    <h3>2011 - 2017</h3>
+                    <p>...</p>
+                </li>
+            </ul>
+        </section>
+        <hr/>
+        <section id="experience" name="Kokemus">
+            <h1>Työkokemus</h1>
+            <ul>
+                <li>
+                    <h2>Helsingin yliopiston kirjasto</h2>
+                    <h3>Asiakasneuvoja (Kirjastovirkailija)</h3>
+                    <h3>19.02.2024 lähtien</h3>
+                    <p>Työtehtävinä kirjastonhoitajan työtä, mm. kirjojen hyllytys, lajittelu, varauskäsittely ja asiakaspalvelu.</p>
+                    <p>Lisäksi muita satunnaisia kirjastoon liittyviä työtehtäviä, kuten kuten postin haku, sekä satunnaisia IT-askareita kuten kehitystyötä graafisten suunnitelmien pohjalta.</p>
+                    <p>Asiakasneuvoja. Työkielinä suomi ja englanti, ja toisinaan tarvittaessa myös venäjä.</p>
+                </li>
+                <li>
+                    <h2>Terveyden ja hyvinvoinnin laitos</h2>
+                    <h3>Suunnittelija (IT-tukihenkilö)</h3>
+                    <h3>01.09. - 31.12.2023</h3>
+                    <p>Työtehtävinä tikettijonon ylläpito, tikettien ratkaisu, ja asiakaspalvelu Jiratehtävienhallintaohjelmiston kautta, sekä muiden Atlassianin tuotteiden käyttö tukipyyntöjen ratkaisussa.</p>
+                    <p>Tehtäviin kuului lisäksi Java-pienohjelmistokehittämistä, jossa teknologioina suurimmaksi osaksi Apache Wicket ja PostgreSQL.</p>
+                    <p>Työkielinä suomi ja englanti.</p>
+                </li>
+                <li>
+                    <h2>Terveyden ja hyvinvoinnin laitos</h2>
+                    <h3>Ohjelmistokehittäjäharjoittelija</h3>
+                    <h3>11.01. - 21.05.2023</h3>
+
+                    <p>Ammatillisiin opintoihin sisältyvä työharjoittelu. Harjoittelija digitaalisten palveluiden yksiköllä.</p> 
+                    <p>Tehtävänä pääosin fullstack-ohjelmistokehitykseen osallistuminen harjoittelijana, Spring- ja Angular-frameworkeja sekä PostgreSQL tietokantaa käyttäen.</p>
+                    <p>Lisäksi myös organisaatiotoiminnan ja sovelluskehitykselle ominaisten käsitteiden, kuten scrum ja kanban, ketterä (agile) sovelluskehitys.</p>
+                    <p>Työkielinä suomi ja englanti.</p>
+                </li>
+                <li>
+                    <h2>Menestystarinat Oy</h2>
+                    <h3>Ohjelmistokehittäjäharjoittelija</h3>
+                    <h3>22.03. - 21.05.2021</h3>
+
+                    <p>Ohjelmistokehitystä Wordpress-alustalla Elementor-rakennusjärjestelmällä.</p>
+                    <p>Päätyökielenä englanti etäyhteydellä Suomen ulkopuolella sijaitsevien kollegoiden kanssa, ja suomi lähinnä vain lähityössä.</p>
+                </li>
+                <li>
+                    <h2>Yliopiston apteekki</h2>
+                    <h3>Apteekkiapulainen</h3>
+                    <h3>marraskuu 2019</h3>
+                    <p>Ylä-asteen TET-harjoittelu, apteekkiapulainen.</p>
+                    <p>Tehtävinä varasto- ja siivoustyö, sekä muut satunnaiset askareet</p>
+                </li>
+                <li>
+                    <h2>Goodmax Oy</h2>
+                    <h3>Sihteeriapulainen</h3>
+                    <h3>marraskuu 2018</h3>
+                    <p>Ylä-asteen TET-harjoittelu, sihteeriapulainen</p>
+                    <p>Tehtävinä arkistointi ja tietojen syöttö tietojärjestelmään</p>
+                </li>
+            </ul>
         </section>
         <hr />
-        <section id="tyot">
-            c
+        <section id="works" name="Projektit">
+            <h1>Projektit</h1>
+            <ul>
+                <li>
+                    <h2>
+                        <a href="https://github.com/EeegorL/svelte_sivu" target="_blank">Aikatauluprojekti</a>
+                    </h2>
+                    <h3>SvelteKit & MariaDB</h3>
+                    <p>Töissä käytössä olevasta n. 15 v vanhasta JQuery-pohjaisesta aikatulusovelluksesta inspiroituneena, päätin kokeilla tehdä itse samankaltaisen yksinkertaisen vuorojärjestelmän.</p>
+                    <div class="imgContainer">
+                        <img src="img/svelte_sivu1.png"/>
+                        <img src="img/svelte_sivu2.png"/>
+                    </div>
+                    <p>On vielä keskeneräinen ja työn alla, mutta SvelteKit:iä itselle uutena teknologiana käyttäen on ollut hauska oppimisprojekti.</p>
+                </li>
+            </ul>
         </section>
         <hr />
-        <section id="yhteystiedot">
-            d
+        <section id="contact" name="Yhteystiedot">
+            <h1>Yhteystiedot</h1>
+            <p>Parhaiten minut saa kiinni sähköpostitse: <a href="mailto:mikkolegezin@gmail.com" class="mailLink">mikkolegezin(at)gmail.com</a>, tai esim. Linkedinistä! (ks. oikea reunapalkki)</p>
         </section>
     </main>
     <aside>
         <ul>
-            <ul>
-                <li>
-                    <a href="https://github.com/EeegorL" target="_blank"><img src="linkedin.svg" width="16"
-                            alt="Linkedin logo" /> Linkedin</a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/mikko-legezin-5297b9216/" target="_blank"><img src="github.svg"
-                            width="16" alt="Github logo" /> Github</a>
-                </li>
-            </ul>
+            <li>
+                <a href="https://github.com/EeegorL" target="_blank">
+                    <img src="github.svg" width="16" alt="Github-logo"/> Github
+                    
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/mikko-legezin-5297b9216/" target="_blank">
+                    <img src="linkedin.svg" width="16" alt="Linkedin-logo"/>Linkedin
+                </a>
+            </li>
         </ul>
     </aside>
     <script src="index.js"></script>

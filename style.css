@@ -1,36 +1,55 @@
 :root {
+    --bg: #fff8e9;
+
+    --light: #6f8d4f;
+    --mid: #dfcdb2;
+    --dark: #28361a;
+
+    --text: #22180f;
+    --textAlt: #fff3e9;
+
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
-
-    --main: rgb(181, 207, 241);
-
-    --light: rgb(203, 224, 241);
-    --dark: rgb(111, 147, 177);
+    color: var(--text);
 }
 
 html, body {
     min-height: 100%;
 }
 
+.headsup {
+    color: red;
+    background-color: azure;
+    padding: 2rem;
+    border: .2rem solid red;
+}
+
 body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: var(--light);
+    background-color: var(--bg);
 
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
 main {
-    flex: 5;
     padding: 5em;
     box-sizing: border-box;
+
+    grid-column: 2;
 }
 
 aside {
-    flex: 1;
+    grid-column: 3;
+}
 
+aside:first-child {
+    grid-column: 1;
+}
+
+aside {
     padding: 0 .5rem;
 
     text-align: center;
@@ -39,29 +58,53 @@ aside {
     top: 0;
     height: 100vh;
 
-    background-color: var(--main);
+    background-color: var(--light);
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    
 }
 
 aside section:first-child a{
     padding: .5rem 2rem;
 }
 
+main section {
+    min-height: 10vh;
+    margin: 5rem 0;
+}
+
 ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 li {
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 
-a {
-    color: black;
+main section li {
+    border: 1px solid var(--mid);
+    border-radius: 1rem;
+}
+
+main section li:nth-child(even) {
+    border: none;
+    background-color: var(--mid);
+    color: var(--text);
+}
+
+main section h1:first-child {
+    text-decoration: overline underline var(--light);
+}
+
+aside a {
+    color: var(--textAlt);
     text-decoration: none;
 
     padding: .5rem;
@@ -70,13 +113,125 @@ a {
     box-shadow: 3px 3px 3px 3px var(--dark);
 }
 
-a:hover {
-    color: whitesmoke;
-    background-color: var(--dark);
-    /* box-shadow: -1px -1px var(--dark); */
-    box-shadow: none;
+
+
+.mailLink {
+    all: unset;
+    text-decoration: underline;
 }
 
+
 hr {
-    border: 1px solid black;
+    border: 6px solid var(--dark);
+    border-radius: -1rem;
+    /* margin: 0 10px */
+}
+
+main a {
+    text-decoration: underline;
+    color: var(--text);
+}
+
+
+.imgContainer {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+}
+
+.imgContainer img {
+    width: 100%;
+}
+
+@media (orientation: portrait) {
+    aside {
+        position: fixed;
+        
+        padding: 0;
+        padding: 1rem 0;
+
+        top: unset;
+        bottom: 0;
+        right: 0;
+        width: 20%;
+        
+        height: fit-content;
+        flex-direction: row;
+        
+        /* width: 50vw; */
+        height: 10vh;
+        /* padding: 1rem; */
+    }
+
+    aside:first-child {
+        left: 0;
+        width: 85%;
+    }
+
+    aside:first-child section{
+        flex: 5;
+    }
+
+    aside:first-child section:first-child{
+        flex: 1;
+    }
+
+    aside:first-child section:first-child h1 {
+        /* font-size: medium; */
+        white-space: wrap;
+    }
+
+    .imgContainer {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    aside ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: left;
+        margin: 0;
+        gap: .5rem;
+    }
+    
+    aside nav ul {
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        flex-wrap: wrap;
+       
+    }
+
+    aside ul li, aside ul a {
+        padding: .3rem;
+        height: fit-content;
+    }
+
+    aside h1 {
+        font-size: large;
+    }
+
+    li {
+        margin: 0;
+    }
+}
+
+@media (hover: hover) {
+    main a:hover {
+        color: var(--text);
+        text-decoration: overline underline;
+        background-color: transparent;
+    }
+
+    .mailLink:hover {
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: whitesmoke;
+        background-color: var(--dark);
+        box-shadow: none;
+        cursor: pointer;
+    }
 }
