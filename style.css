@@ -73,7 +73,8 @@ aside:first-child section {
 aside h1 {
     color: var(--bg);
     background-color: var(--dark);
-    padding: 1rem 0;
+    padding: .5rem 0;
+    margin: 1rem;
     border-radius: 1rem;
     font-size: 3rem;
 }
@@ -130,7 +131,8 @@ a img {
 main section li {
     border: 1px solid var(--dark);
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
 }
 
 main section li:nth-child(even) {
@@ -141,6 +143,7 @@ main section li:nth-child(even) {
 
 main section h1:first-child {
     text-decoration: overline underline var(--dark);
+    font-size: 5vh;
 }
 
 .mailLink {
@@ -156,6 +159,10 @@ hr {
 main a {
     text-decoration: underline;
     color: var(--text);
+    margin-left: -.5rem;
+    padding: .5rem;
+
+    border-radius: 1rem;
 }
 
 
@@ -260,7 +267,7 @@ main a {
     }
 
     aside ul li, aside ul a {
-        padding: 1vh;
+        padding: 1vw;
         height: fit-content;
     }
 
@@ -275,9 +282,8 @@ main a {
 
 @media (hover: hover) {
     main a:hover {
-        color: var(--text);
-        text-decoration: overline underline;
-        background-color: transparent;
+        color: var(--textAlt);
+        background-color: var(--dark);
     }
 
     .mailLink:hover {
@@ -289,6 +295,7 @@ main a {
         background-color: var(--dark);
         box-shadow: none;
         cursor: pointer;
+        text-decoration: none;
     }
 
     .lol a:hover {
