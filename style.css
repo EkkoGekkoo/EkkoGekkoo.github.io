@@ -1,9 +1,9 @@
 :root {
-    --bg: #fff6e9;
+    --bg: #F4F6F6;
 
-    --light: #5c462c;
-    --mid: #dfcdb2;
-    --dark: #2c2212;
+    --light: #6A994E;
+    --mid: #96bb81;
+    --dark: #386641;
 
     --text: #272012;
     --textAlt: #f1f1f1;
@@ -11,6 +11,10 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     color: var(--text);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 html, body {
@@ -46,7 +50,7 @@ aside {
     top: 0;
     height: 100vh;
     width: fit-content;
-    min-width: 20vh;
+    min-width: 15rem;
 
     background-color: var(--light);
 
@@ -68,13 +72,18 @@ aside:first-child section {
 
 aside h1 {
     color: var(--bg);
+    background-color: var(--dark);
+    padding: 1rem 0;
+    border-radius: 1rem;
+    font-size: 3rem;
+}
+aside h1:hover {
+    cursor: pointer;
 }
 
 aside a {
     color: var(--textAlt);
     text-decoration: none;
-
-    padding: .5rem;
     border-radius: 1rem;
 
     box-shadow: 3px 3px 3px 3px var(--dark);
@@ -83,6 +92,10 @@ aside a {
 main section {
     min-height: 10vh;
     margin: 5rem 0;
+}
+
+main section:last-child {
+    padding-bottom: 10vh;
 }
 
 ul {
@@ -98,19 +111,24 @@ nav {
 
 li {
     padding: 1rem 0;
+    margin-bottom: 2vh;
     width: 100%;
-    margin-bottom: 1rem;
 }
 
 li > a {
     width: 100%;
-    padding: 1rem 3rem;
+    padding: 1vh;
     background-color: var(--bg);
     color: var(--text);
+    user-select: none;
+}
+
+a img {
+    margin-right: .2rem;
 }
 
 main section li {
-    border: 1px solid var(--mid);
+    border: 1px solid var(--dark);
     border-radius: 1rem;
     padding: 1rem;
 }
@@ -122,7 +140,7 @@ main section li:nth-child(even) {
 }
 
 main section h1:first-child {
-    text-decoration: overline underline var(--light);
+    text-decoration: overline underline var(--dark);
 }
 
 .mailLink {
@@ -152,7 +170,27 @@ main a {
     width: 100%;
 }
 
-@media (orientation: portrait) and (max-width: 1150px){
+.lol {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media (max-width: 1240px) and (min-height: 400px){
+    main {
+        width: 100vw;
+        padding: 1rem;
+    }
+
+    main > * {
+        font-size: medium;
+    }
+
+    aside > * {
+        font-size: small;
+        user-select: none;
+    }
+    
     aside {
         position: fixed;
         
@@ -161,17 +199,23 @@ main a {
         top: unset;
         bottom: 0;
         right: 0;
-        width: 20%;
-        height: 10vh;
+        width: 25%;
+        height: 15vh;
 
         flex-direction: row;
 
         min-width: unset;
     }
 
+    aside h1 {
+        margin-left: 1rem;
+        padding: .2rem;
+        font-size: small;
+    }
+
     aside:first-child {
         left: 0;
-        width: 81%;
+        width: 76%;
     }
 
     aside:first-child section{
@@ -210,15 +254,18 @@ main a {
         flex-direction: row;
         height: fit-content;
         flex-wrap: wrap;
+
+        align-items: center;
+        justify-content: center;
     }
 
     aside ul li, aside ul a {
-        padding: .3rem;
+        padding: 1vh;
         height: fit-content;
     }
 
     aside h1 {
-        font-size: large;
+        font-size: medium;
     }
 
     li {
@@ -242,5 +289,40 @@ main a {
         background-color: var(--dark);
         box-shadow: none;
         cursor: pointer;
+    }
+
+    .lol a:hover {
+        background-color: unset;
+    }
+
+    .lol button:hover {
+        background-color: var(--light);
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 350px), (max-height: 400px) {
+    *:not(html, body) {
+        display: none;
+    }
+    
+    .lol {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .lol p, button, a {
+        display: block;
+        color: black;
+    }
+
+    .lol button {
+        background-color: var(--dark);
+        color: var(--textAlt);
+        border-radius: 1rem;
+        padding: 2rem;
+        margin: 1rem;
     }
 }

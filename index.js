@@ -9,7 +9,6 @@ const navList = document.getElementById("navList");
 document.addEventListener("DOMContentLoaded", () => {
     ageElem.innerHTML = Math.floor(myAge);
 
-
     const title = document.getElementById("title");
     title.onclick = () => document.body.scrollIntoView({behavior: "smooth"});
 
@@ -28,12 +27,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
 });
-
-
-// const progressElem = document.getElementById("progressBar");
-// document.addEventListener("scroll", () => {
-//     let scrollProgress = document.body.scrollTop | document.documentElement.scrollTop;
-//     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-//     progressElem.style.height = `${(scrollProgress / height) * 100}%`;
-// });
