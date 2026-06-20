@@ -200,13 +200,16 @@ main a {
         margin: 0;
         gap: .5rem;
     }
+
+    aside nav, aside li {
+        width: unset;
+    }
     
     aside nav ul {
         display: flex;
         flex-direction: row;
         height: fit-content;
         flex-wrap: wrap;
-       
     }
 
     aside ul li, aside ul a {
