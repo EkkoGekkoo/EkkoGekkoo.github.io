@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const title = document.getElementById("title");
     title.onclick = () => document.body.scrollIntoView({behavior: "smooth"});
 
-    const mainChildren = [...main.children];
+    const mainChildren = [...main.children].reverse();
     for(let c of mainChildren) {
         if(c.nodeName !== "SECTION") continue;
         let listItem = document.createElement("li");
@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if(link.innerHTML == "Minusta") continue;
         link.onclick = () => c.scrollIntoView({behavior: "smooth"});
         listItem.appendChild(link);
-        navList.appendChild(listItem);
+        navList.prepend(listItem);
     }
-    
 });
